@@ -1,0 +1,83 @@
+<!--
+<main>
+    <div class="container">
+        <div class="column">
+          <button class="triggeroverlay" onclick="location.href='#ovrlay'">daily excerpt</button>
+          <div id="ovrlay" class="ovrlay">
+            <div class="newwindow">
+                <div class="window glass active" style="max-width: 100%">
+                  <div class="title-bar">
+                    <div class="title-bar-text">daily excerpt</div>
+                    <div class="title-bar-controls">
+                      <button aria-label="Minimize"></button>
+                      <button aria-label="Maximize"></button>
+                      <button aria-label="Close" class="closewindow" onclick="location.href='#'"></button>            
+                    </div>
+                  </div>
+                  <div class="window-body has-space">
+                    <p>There is so much room to fill with experiences!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="column">
+            <button type="button">zettelkasten</button>
+        </div>
+        <div class="column">
+            <a href="inspiraton.html">
+            <button type="button">inspiration</button>
+            </a>
+        </div>
+    </div>
+</main>
+
+
+<div class="dates">
+  <div class="window glass active" style="max-width: 300px">
+    <div class="title-bar">
+      <div class="title-bar-text">Current date:</div>
+      <div class="title-bar-controls">
+      </div>
+    </div>
+    <div class="window-body has-space">
+      <p></p>
+      <div id="date">
+        <script>
+          date = new Date();
+          year = date.getFullYear();
+          month = date.getMonth() + 1;
+          day = date.getDate();
+          document.getElementById("date").innerHTML = month + "/" + day + "/" + year;
+      </script>
+      </div>
+      <p></p>
+    </div>
+ </div>
+</div>
+
+<footer>
+      <div class="window glass active" style="max-width: 300px">
+        <div class="title-bar">
+          <div class="title-bar-text">Current time:</div>
+          <div class="title-bar-controls">
+          </div>
+        </div>
+        <div class="window-body has-space">
+          <p></p>
+          <div id="time">
+          <script>
+              time = new Date();
+              hours = time.getHours();
+              minutes = time.getMinutes();
+              minutes = minutes < 10 ? '0' + minutes : minutes;
+              const ampm = hours >= 12 ? 'PM' : 'AM';
+              hours = hours % 12;
+              hours = hours ? hours : 12; 
+              document.getElementById('time').innerHTML = hours + ":" + minutes + " " +ampm;
+          </script>
+          </div>
+          <p></p>
+    </div>
+</footer>
+-->

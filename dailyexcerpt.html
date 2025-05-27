@@ -1,0 +1,118 @@
+<!--
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Basics Tutorial</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/7.css">
+    <script src="sketch.js"></script>
+</head>
+
+<body>
+
+<div class="bg">
+    <img src="summerdays.jpg" alt="">
+</div>
+
+<div class="window active" style="max-width: 2302px">
+    <div class="title-bar">
+      <div class="title-bar-text">uusummer</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize" disabled></button>
+        <button aria-label="Close"></button>
+      </div>
+    </div>
+</div>
+
+<nav class="topnav">
+        <ul role="menubar" class="can-hover">
+            <li role="menuitem" tabindex="0" aria-haspopup="true">
+              File
+              <ul role="menu">
+                <li role="menuitem">
+                  <a href="#menubar">
+                    Save <span>Ctrl+S</span>
+                  </a>
+                </li>
+                <li role="menuitem" class="has-divider">
+                  <a href="#menubar">
+                    Save As... <span>Ctrl+Shift+S</span>
+                  </a>
+                </li>
+                <li role="menuitem"><a href="#menubar">Exit</a></li>
+              </ul>
+            </li>
+            <li role="menuitem" tabindex="0" aria-haspopup="true">
+              Edit
+              <ul role="menu">
+                <li role="menuitem"><a href="#menubar">Undo</a></li>
+                <li role="menuitem"><a href="#menubar">Copy</a></li>
+                <li role="menuitem"><a href="#menubar">Cut</a></li>
+                <li role="menuitem" class="has-divider"><a href="#menubar">Paste</a></li>
+                <li role="menuitem"><a href="#menubar">Delete</a></li>
+                <li role="menuitem"><a href="#menubar">Find...</a></li>
+                <li role="menuitem"><a href="#menubar">Replace...</a></li>
+                <li role="menuitem"><a href="#menubar">Go to...</a></li>
+              </ul>
+            </li>
+            <li role="menuitem" tabindex="0" aria-haspopup="true">
+              Customization
+              <ul role="menu">
+                <li role="menuitem" tabindex="0" aria-haspopup="true">
+                  Zoom
+                  <ul role="menu">
+                    <li role="menuitem"><button>Zoom In</button></li>
+                    <li role="menuitem"><button>Zoom Out</button></li>
+                  </ul>
+                </li>
+                <li role="menuitem"><a href="#menubar">Add Media</a></li>
+                <li role="menuitem"><a href="#menubar">Upload Background</a></li>
+                <li role="menuitem"><a href="#menubar">Resize Nodes</a></li>
+              </ul>
+            </li>
+            <li role="menuitem" tabindex="0" aria-haspopup="true">
+              Help
+              <ul role="menu">
+                <li role="menuitem"><a href="#menubar">About</a></li>
+              </ul>
+            </li>
+        </ul>
+</nav>
+
+<div class="window active" style="max-width: 300px">
+  <div class="title-bar">
+    <div class="title-bar-text">A window with contents</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button aria-label="Close"></button>
+    </div>
+  </div>
+  <div class="window-body has-space">
+    <p>There's so much room for activities!</p>
+  </div>
+</div>
+
+<header>
+</header>
+
+<main>
+
+</main>
+
+<footer>
+    <div id="date">
+        <script>
+            let d = new Date();
+            document.getElementById("date").innerHTML =  d.getMonth() + "/" + d.getDay() + "/" + d.getFullYear() 
+        </script>
+    </div>
+    
+</footer>
+
+</body>
+</html>

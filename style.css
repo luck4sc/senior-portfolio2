@@ -1,0 +1,109 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+main {
+  background-color: #00ff95;
+}
+.container {
+  display: flex;
+  margin: 80px auto 40px;
+  position: relative; 
+  justify-content: center; 
+}
+.column {  
+  padding: 40px;
+  margin-right: 80px;
+}
+.buttons {
+text-align: center; 
+  margin-top: 20px;
+}  
+
+/*
+footer {
+position: fixed;
+bottom: 0;
+left: 0;
+width: 150px; 
+padding: 20px;
+text-align: center;
+}
+.dates {
+  position: fixed;
+  bottom: 0;
+  left: 319px;
+  width: 150px; 
+  padding: 20px;
+  text-align: center;
+}
+*/
+.window {
+cursor: move;
+}
+.bg {
+position: fixed; 
+top: -50%; 
+left: -50%; 
+width: 200%; 
+height: 200%;
+}
+.bg img {
+position: absolute; 
+top: 0; 
+left: 0; 
+right: 0; 
+bottom: 0; 
+margin: auto; 
+min-width: 50%;
+min-height: 50%;
+}
+.topnav {
+position: fixed;
+top: 28px;
+width: 100%;
+}
+.ovrlay {
+display: none;
+z-index: 9999;
+}
+.ovrlay:target {
+display: block; 
+}
+.newwindow {
+width: 80%;
+max-width: 1000px;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.videeoo {
+position: relative;
+width: 100%;
+max-width: 500px; 
+margin: 0 auto;
+border: none;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+}
+
+.menu-link {
+  display: block;           
+  padding: 0.2em 0.2em;       
+  color: inherit;           
+}
+
+.menu-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.menu-link.active {
+  background-color: rgba(255, 255, 255, 0.238);
+  box-shadow: inset 0 -2.5px 0 #000;
+  font-weight: bold;
+}
