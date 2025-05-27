@@ -9,7 +9,6 @@ function makeDraggable(windowEl) {
     const rect = windowEl.getBoundingClientRect();
     offsetX = e.clientX - rect.left;
     offsetY = e.clientY - rect.top;
-    windowEl.style.position = "absolute";
     windowEl.style.zIndex = 1000;
   });
 

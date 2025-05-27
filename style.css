@@ -41,7 +41,10 @@ text-align: center;
 */
 .window {
 cursor: move;
+position: absolute;
 }
+
+
 .bg {
 position: fixed; 
 top: -50%; 
@@ -87,6 +90,15 @@ max-width: 500px;
 margin: 0 auto;
 border: none;
 }
+
+/*
+
+.bio {
+position: relative;
+width: 300%; 
+}
+
+*/
 
 video {
   width: 100%;

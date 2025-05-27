@@ -37,15 +37,36 @@
 </nav>
 
 
+<div class="window active" style="max-width: 400px">
+  <div class="title-bar">
+    <div class="title-bar-text">Introduction</div>
+  </div>
 
-  <main>
-    <div class="container">
-      <div class="column">
-        <h1>Project two</h1>
-        <p>details</p>
-        <!-- You can include images, videos, etc. here -->
-      </div>
-    </div>
-  </main>
+  <div class="window-body has-space">
+    <menu role="tablist" aria-label="Window with Tabs">
+      <button role="tab" aria-controls="Background" aria-selected="true">Background</button>
+      <button role="tab" aria-controls="Process">Process</button>
+      <button role="tab" aria-controls="Completed">Completed Work</button>
+    </menu>
+    
+    <article role="tabpanel" id="Background">
+      <p>empty</p>
+    </article>
+
+
+    <article role="tabpanel" hidden id="Process">
+      <p>empty</p>
+    </article>
+
+    <article role="tabpanel" hidden id="Completed">
+        <p>empty</p>
+    </article>
+
+  </div>
+</div>
+
+
+
+
 </body>
 </html>

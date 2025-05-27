@@ -27,7 +27,6 @@
     </div>
 </div>
 
-
 <nav class="topnav">
     <ul role="menubar" class="can-hover">
           <li role="menuitem" tabindex="0"> <a href="index.html" class="menu-link">Home</a></li>
@@ -38,14 +37,63 @@
 
 
 
-  <main>
-    <div class="container">
-      <div class="column">
-        <h1>Project 1</h1>
-        <p>details</p>
-        <!-- You can include images, videos, etc. here -->
-      </div>
-    </div>
-  </main>
+
+
+
+<div class="window active" style="top: 300px; left: 330px; width: 800px;">
+  <div class="title-bar">
+    <div class="title-bar-text">Introduction</div>
+  </div>
+
+  <div class="window-body has-space">
+    <menu role="tablist" aria-label="Window with Tabs">
+      <button role="tab" aria-controls="Background" aria-selected="true">Background</button>
+      <button role="tab" aria-controls="Process">Process</button>
+      <button role="tab" aria-controls="Completed">Completed Work</button>
+    </menu>
+
+    <article role="tabpanel" id="Background">
+      <p>empty</p>
+    </article>
+
+
+    <article role="tabpanel" hidden id="Process">
+      <p>empty</p>
+    </article>
+
+    <article role="tabpanel" hidden id="Completed">
+        <p>empty</p>
+    </article>
+
+  </div>
+</div>
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const tabLists = document.querySelectorAll('[role="tablist"]');
+
+    tabLists.forEach(tabList => {
+      const tabs = tabList.querySelectorAll('[role="tab"]');
+
+      tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+          // Deselect all tabs
+          tabs.forEach(t => {
+            t.setAttribute("aria-selected", "false");
+            document.getElementById(t.getAttribute("aria-controls")).hidden = true;
+          });
+
+          // Select clicked tab
+          tab.setAttribute("aria-selected", "true");
+          document.getElementById(tab.getAttribute("aria-controls")).hidden = false;
+        });
+      });
+    });
+  });
+</script>
+
+
 </body>
 </html>
