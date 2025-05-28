@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Basics Tutorial</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://unpkg.com/7.css">
     <script src="move.js"></script>
     <script src="script.js" defer></script>
@@ -33,13 +32,14 @@
           <li role="menuitem" tabindex="0"> <a href="index.html" class="menu-link">Home</a></li>
           <li role="menuitem" tabindex="0"> <a href="project1.html" class="menu-link">Project 1</a> </li> 
           <li role="menuitem" tabindex="0"> <a href="project2.html" class="menu-link active">Project 2</a></li> 
+          <li role="menuitem" tabindex="0"> <a href="resume.html" class="menu-link">Resume</a></li>
     </ul>
 </nav>
 
 
-<div class="window active" style="max-width: 400px">
+<div class="window active" style="top: 250px; left: 75px; width: 600px;">
   <div class="title-bar">
-    <div class="title-bar-text">Introduction</div>
+    <div class="title-bar-text">Create Task</div>
   </div>
 
   <div class="window-body has-space">
@@ -48,24 +48,99 @@
       <button role="tab" aria-controls="Process">Process</button>
       <button role="tab" aria-controls="Completed">Completed Work</button>
     </menu>
-    
+
     <article role="tabpanel" id="Background">
-      <p>empty</p>
+      <p>For part of the AP Computer Science princilples course, I was tasked with completing a 
+        Create Performance Task, something that involved developing a computer program of my choice.
+        In addition to that, as part of the AP exam I had to answer a series of questions in order to 
+        explain how my code works, how it handles input/output, how I used algorithms, and various 
+        other aspects.
+      </p>
     </article>
 
-
     <article role="tabpanel" hidden id="Process">
-      <p>empty</p>
+      <p> Prior to settling on my final project idea, I went through numerous concepts. I really struggled
+        with overthinking during the entire process, finding it difficult to come up with an idea that felt original
+        enough to not get labeled as copying off of another create task submission, but not so complex that I would not be
+        able to properly explain it during the AP exam. The idea for a basic water tracker came to me after I forgot my water 
+        bottle ay home one school day and realized how easy it is to loose track of hydration. As I refined the scope and features
+        of my code, I developed a proper understanding of how it worked, enough so that I felt very confident in my ability to explain it
+        during the Create Task questions.
+      </p>
     </article>
 
     <article role="tabpanel" hidden id="Completed">
-        <p>empty</p>
+        <p>Here is a link to my completed project repository: https://github.com/luck4sc/create-task-practice-1 </p>
     </article>
 
   </div>
 </div>
 
 
+<div class="window glass active" style="top: -210px; left: 770px; width: 600px;">
+  <div class="title-bar">
+    <div class="title-bar-text"> Function Def:</div>
+    <div class="title-bar-controls">
+    </div>
+  </div>
+  <div class="window-body has-space">
+      <img style="width: 100%"
+        src="assets/PPR FUNCTION DEF.jpg"/>
+    </div>
+  </div>
+</div>
+
+<div class="window glass active" style="top: -180px; left: 770px; width: 600px;">
+  <div class="title-bar">
+    <div class="title-bar-text"> List Creation:</div>
+    <div class="title-bar-controls">
+    </div>
+  </div>
+  <div class="window-body has-space">
+      <img style="width: 100%"
+        src="assets/PPR LIST CREATION.jpg"/>
+    </div>
+  </div>
+</div>
+
+<div class="window glass active" style="top: -150px; left: 770px; width: 600px;">
+  <div class="title-bar">
+    <div class="title-bar-text"> List Use:</div>
+    <div class="title-bar-controls">
+    </div>
+  </div>
+  <div class="window-body has-space">
+      <img style="width: 100%"
+        src="assets/PPR LIST USE.png"/>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const tabLists = document.querySelectorAll('[role="tablist"]');
+
+    tabLists.forEach(tabList => {
+      const tabs = tabList.querySelectorAll('[role="tab"]');
+
+      tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+          // Deselect all tabs
+          tabs.forEach(t => {
+            t.setAttribute("aria-selected", "false");
+            document.getElementById(t.getAttribute("aria-controls")).hidden = true;
+          });
+
+          // Select clicked tab
+          tab.setAttribute("aria-selected", "true");
+          document.getElementById(tab.getAttribute("aria-controls")).hidden = false;
+        });
+      });
+    });
+  });
+</script>
 
 
 </body>
